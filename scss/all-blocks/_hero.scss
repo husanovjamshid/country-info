@@ -58,7 +58,7 @@
     color: var(--main-text-color);
 }
 
-@include media(768px) {
+@include media(767px) {
     .hero__select {
         margin-top: 20px;
     }
