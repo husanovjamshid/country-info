@@ -1,0 +1,65 @@
+.hero {
+    padding: 60px 0;
+}
+
+.hero__inner {
+    padding: 48px 0;
+}
+
+.hero__input {
+    width: 100%;
+    max-width: 480px;
+    outline: none;
+    background: var(--main-bg-header);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    border: none;
+}
+
+.hero__input::placeholder {
+    color: var(--main-text-color);
+}
+
+.hero__input:focus {
+    color: var(--main-text-color);
+    background: var(--main-bg-header);
+}
+
+.input-group-text {
+    background: var(--main-bg-header);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border: none;
+    cursor: pointer;
+}
+
+.form-select {
+    width: 100%;
+    max-width: 200px;
+    outline: none;
+    background: var(--main-bg-header);
+    color: var(--main-text-color);
+    border: none;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-select option {
+    border: none;
+    outline: none;
+    background: var(--main-bg-header);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+}
+
+@include media(768px) {
+    .hero__select {
+        margin-top: 20px;
+    }
+}

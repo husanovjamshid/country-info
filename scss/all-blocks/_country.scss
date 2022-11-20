@@ -1,0 +1,19 @@
+.card {
+    cursor: pointer;
+    background-color: var( --main-bg-header);
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--main-text-color);
+}
+
+.card-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-text-color)
+}
+

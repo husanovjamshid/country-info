@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css" >
+    <title>Country</title>
+</head>
+<body>
+    <header class="site-header shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-3 d-md-flex justify-content-md-between align-content-md-center"> 
+                <a class="navbar-brand" href="#"><p class="site-header__title">Where in the world?</p></a>
+                
+                <a href="#" class="dark-mode d-flex align-items-center text-decoration-none">
+                    <img src="./images/dark-mode.svg" width="15" height="13" alt="dark mode">
+                    <p class="dark-mode__title ms-2">Dark Mode</p>
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="hero">
+        <section class="info">
+            <div class="container">
+                <div class="info__inner">
+                    <a class="info__back d-flex shadow-sm d-inline-block w-25 p-3 align-items-center text-decoration-none" href="index.html">
+                        <img src="./images/left-white.svg" class="img-fluid me-2" alt="arrow left">
+                        Back
+                    </a>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-12 col-md-12 col-lg-6 d-md-flex justify-content-center">
+                            <img src="./images/belgium.jpg" class="img-fluid info__img" alt="belgium flag">
+                        </div>
+                        <div class="col-12 col-md-12  mt-0 col-lg-6 info__country">
+                            <h3 class="info__title">Belgium</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="my-2 info__desc"><strong>Native Name</strong>:België</p>
+                                    <p class="my-2 info__desc"><strong>Population</strong>:11,319,511</p>
+                                    <p class="my-2 info__desc"><strong>Region</strong>:Europe</p>
+                                    <p class="my-2 info__desc"><strong>Sub Region</strong>:Western Europe</p>
+                                    <p class="my-2 info__desc"><strong>Capital</strong>:Brussels</p>
+                                </div>
+                                
+                                <div class="col-md-6 mt-lg-0 mt-md-5 mt-sm-5">
+                                    <p class="my-2 info__desc"><strong>Top Level Domain</strong>:be</p>
+                                    <p class="my-2 info__desc"><strong>Currencies</strong>:Euro</p>
+                                    <p class="my-2 info__desc"><strong>Languages</strong>:Dutch, French, German</p>
+                                </div>
+                            </div>
+                            <div class="info__buttons d-flex ">
+                                <p class="info__text me-3">Border Countries: </p>
+                                <div>
+                                    <button class="btn info__btn border border-1 shadow-sm me-2">France</button>
+                                    <button class="btn info__btn border border-1 shadow-sm me-2">Germany</button>
+                                    <button class="btn info__btn border border-1 shadow-sm">Netherlands</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

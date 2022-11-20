@@ -1,0 +1,19 @@
+.site-header {
+    background-color: var(--main-bg-header);
+}
+
+.site-header__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--main-text-color);
+}
+
+.dark-mode__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-text-color);
+}
