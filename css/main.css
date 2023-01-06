@@ -391,6 +391,12 @@ img {
   color: var(--main-text-color);
 }
 
+.country-img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+}
+
 .hero {
   padding: 60px 0;
 }
