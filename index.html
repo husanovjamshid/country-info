@@ -28,16 +28,17 @@
       <div class="hero__inner">
         <div class="row">
           <div class="col-12 col-sm12 col-md-6">
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping"><img src="./images/search.svg" width="18" height="18"  alt=""></span>
-              <input type="text" class="form-control hero__input shadow-sm" placeholder="Search for a country…" aria-label="Username" aria-describedby="addon-wrapping">
-            </div>
+            <form class="js-form">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><img src="./images/search.svg" width="18" height="18"  alt=""></span>
+                <input type="text" class="form-control hero__input shadow-sm js-input" placeholder="Search for a country…" aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+            </form>
           </div>
           <div class="col-12 col-sm-12 hero__select col-md-6 d-flex mt-lg-0 justify-content-sm-start justify-content-lg-end">
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select js-select" aria-label="Default select example">
               <option disabled selected>Filter by Region</option>
               <option value="all">All</option>
-              <option value="1">Africa</option>
             
             </select>
           </div>
