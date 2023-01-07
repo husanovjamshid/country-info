@@ -14,7 +14,7 @@ let elTemplate = document.querySelector(".js-template").content;
 let elList = document.querySelector(".js-list");
 
 function fetchRender(array, node) {
-  elSpinner.innerHTML = ''
+  elSpinner.innerHTML = "";
   elList.innerHTML = " ";
   array.forEach((item) => {
     let newTemplate = elTemplate.cloneNode(true);
@@ -34,7 +34,7 @@ function fetchRender(array, node) {
 }
 
 function selectFunc(array, node) {
-  elSpinner.innerHTML = ''
+  elSpinner.innerHTML = "";
   array.forEach((item) => {
     newSet.add(item.region);
   });
@@ -48,7 +48,7 @@ function selectFunc(array, node) {
 }
 
 function selectResult(array, node) {
-  elSpinner.innerHTML = ''
+  elSpinner.innerHTML = "";
   elSelect.addEventListener("change", async (evt) => {
     let responseReg = await fetch(
       `https://restcountries.com/v3.1/region/${elSelect.value}`
@@ -68,7 +68,7 @@ function selectResult(array, node) {
 }
 
 function inputFunc(array, node) {
-  elSpinner.innerHTML = ''
+  elSpinner.innerHTML = "";
   elForm.addEventListener("submit", async (evt) => {
     evt.preventDefault();
 
@@ -82,7 +82,7 @@ function inputFunc(array, node) {
         item.name.common.toLowerCase().includes(elInput.value.toLowerCase())
       ) {
         fetchRender(inputReg, node);
-      }
+      } 
     });
   });
 }
@@ -90,14 +90,13 @@ function inputFunc(array, node) {
 let newSet = new Set();
 
 let fetchFunc = async () => {
-  
   let response = await fetch("https://restcountries.com/v3.1/all");
   let data = await response.json();
 
   fetchRender(data, elList);
   selectFunc(data, elSelect);
   selectResult(data, elList);
-  inputFunc(data, elList)
+  inputFunc(data, elList);
 };
 
 fetchFunc();
