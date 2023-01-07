@@ -73,13 +73,13 @@ function inputFunc(array, node) {
     evt.preventDefault();
 
     let inputResponse = await fetch(
-      `https://restcountries.com/v3.1/name/${elInput.value}`
+      `https://restcountries.com/v3.1/name/${elInput.value.trim()}`
     );
     let inputReg = await inputResponse.json();
 
     array.forEach((item) => {
       if (
-        item.name.common.toLowerCase().includes(elInput.value.toLowerCase())
+        item.name.common.toLowerCase().includes(elInput.value.trim().toLowerCase())
       ) {
         fetchRender(inputReg, node);
       } 
