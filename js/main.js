@@ -3,6 +3,7 @@ let elModeBtn = document.querySelector(".dark-mode");
 let elSelect = document.querySelector(".js-select");
 let elInput = document.querySelector(".js-input");
 let elForm = document.querySelector(".js-form");
+let elSpinner = document.querySelector(".spinner");
 
 elModeBtn.addEventListener("click", function () {
   elBody.classList.toggle("dark");
@@ -13,6 +14,7 @@ let elTemplate = document.querySelector(".js-template").content;
 let elList = document.querySelector(".js-list");
 
 function fetchRender(array, node) {
+  elSpinner.innerHTML = ''
   elList.innerHTML = " ";
   array.forEach((item) => {
     let newTemplate = elTemplate.cloneNode(true);
@@ -32,6 +34,7 @@ function fetchRender(array, node) {
 }
 
 function selectFunc(array, node) {
+  elSpinner.innerHTML = ''
   array.forEach((item) => {
     newSet.add(item.region);
   });
@@ -45,6 +48,7 @@ function selectFunc(array, node) {
 }
 
 function selectResult(array, node) {
+  elSpinner.innerHTML = ''
   elSelect.addEventListener("change", async (evt) => {
     let responseReg = await fetch(
       `https://restcountries.com/v3.1/region/${elSelect.value}`
@@ -57,13 +61,14 @@ function selectResult(array, node) {
           fetchRender(dataReg, node);
         }
       } else if (elSelect.value == "all") {
-        fetchRender(data, elList);
+        fetchRender(data, node);
       }
     });
   });
 }
 
 function inputFunc(array, node) {
+  elSpinner.innerHTML = ''
   elForm.addEventListener("submit", async (evt) => {
     evt.preventDefault();
 
@@ -85,6 +90,7 @@ function inputFunc(array, node) {
 let newSet = new Set();
 
 let fetchFunc = async () => {
+  
   let response = await fetch("https://restcountries.com/v3.1/all");
   let data = await response.json();
 
